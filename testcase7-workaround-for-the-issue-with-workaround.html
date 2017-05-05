@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        a svg {
+            pointer-events: none;
+        }
+
+        a:hover svg, a:hover svg * {
+            fill: hotpink !important;
+            stroke: hotpink !important;
+        }
+
+        .u-link:hover {
+            outline: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anchor wrapped around SVG &lt;use&gt; with pseudo-class present and not applied to markup with a hover the anchor wrapped around the svg</h1>
+    <div>
+        <strong>Expected Results:</strong> Should navigate to http://www.example.com and hover should apply since it is targeting the anchor and not the svg. <br />
+        <strong>Actual Results:</strong> Navigates to http://www.example.com as expected with hover. <br />
+        <strong>Issue with this workaround:</strong> Increases css specificity and depending on the css architecture used in a project it can become troublesome to a developer. <br />
+        <Strong>Tested In:</Strong>
+        <ul>
+            <li>Microsoft Edge 40.15063.0.0, Microsoft EdgeHTML 15.15063</li>
+        </ul>
+    </div>
+    <a href="http://www.example.com">
+        <svg height="80" width="80">
+            <use xlink:href="SVG_logo.svg#svg-logo"></use>
+        </svg>
+    </a>
+
+    <h1>Anchor wrapped around embedded SVG with pseudo-class present and not applied to markup</h1>
+    <div>
+        <strong>Expected Results:</strong> Should navigate to http://www.example.com. <br />
+        <strong>Actual Results:</strong> Navigates to http://www.example.com as expected. <br />
+        <Strong>Tested In:</Strong>
+        <ul>
+            <li>Microsoft Edge 40.15063.0.0, Microsoft EdgeHTML 15.15063</li>
+        </ul>
+    </div>
+    <a href="http://www.example.com">
+        <svg height="82" width="195" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 195 82">
+            <defs>
+                <path id="c" fill="#005A9C" d="M5.5 31.3C2.2 28 0 23.3 0 18.3 0 8.3 8.4 0 18.5 0 28.7 0 37 8.2 37 18.4H26c0-4.2-3.4-7.6-7.6-7.6-4.2 0-7.5 3.4-7.5 7.6-1 2 0 4 2 5.3 1 1.3 2 1.8 5 2.3 5 .5 9 2 13 5.3 3 3.3 5 8 5 13 0 10-8 18.3-18.8 18.3-10 0-18-8.2-18-18.3h11c0 4.2 3.3 7.6 7.5 7.6s7.6-4 7.6-8c0-2-.8-4-2-6-1.6-1.7-3.5-2-5.6-2.5-5-.8-9.4-2-13-5.4zM73.5 0l-13 62.6H49.7L36.7 0h10.8L55 36.7 62.8 0h10.8zm18.3 26H110v18.3c0 10-8 18.3-18.2 18.3-10 0-18.3-8.2-18.3-18.3v-26C73.5 8.3 81.7 0 91.8 0c10 0 18.3 8.2 18.3 18.4h-10c0-4.2-3-7.6-7-7.6s-8 3.4-8 7.6v26c0 4 3.4 7.5 7.6 7.5 4 0 7.4-4 7.4-8v-8h-8V26z" />
+            </defs>
+            <g shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality">
+                <g transform="matrix(.24 0 0 .24 0 8.4)">
+                    <g stroke="#000" stroke-width="38">
+                        <g id="b" transform="translate(150 150)">
+                            <path id="a" fill="#EDA921" d="M-84-16a22.4 22.4 0 1 0 0 32H84a22.4 22.4 0 1 0 0-32z" />
+                            <use xlink:href="#a" transform="rotate(45)" />
+                            <use xlink:href="#a" transform="rotate(90)" />
+                            <use xlink:href="#a" transform="rotate(135)" />
+                        </g>
+                    </g>
+                    <use xlink:href="#b" />
+                </g>
+                <use xlink:href="#c" transform="matrix(1.08 0 0 1.08 70.2 10.8)" />
+            </g>
+        </svg>
+    </a>
+</body>
+</html>
