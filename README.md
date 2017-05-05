@@ -23,7 +23,7 @@
 
 SVG logos which were embedded and linked were optimized via SVGO and then manually edited for test cases to help make sure test case is reduced.
 
-Not all standard pseudo-classes will cause this bug. For example :first-child does not cause this issue. Seems to be limited to link pseudo-classes and dynamic pseudo-classes.
+Not all standard pseudo-classes will cause this bug. For example :first-child does not cause this issue. Seems to be limited to [link pseudo-classes](https://www.w3.org/TR/CSS2/selector.html#link-pseudo-classes) and [dynamic pseudo-classes](https://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes).
 
 Workarounds included for failing test cases (2,3,4,5,6).
 
