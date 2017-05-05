@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Anchor wrapped around SVG &lt;use&gt; with no pseudo-class present</h1>
+    <div>
+        <strong>Expected Results:</strong> Should navigate to http://www.example.com. <br />
+        <strong>Actual Results:</strong> Navigates to http://www.example.com as expected. <br />
+        <Strong>Tested In:</Strong>
+        <ul>
+            <li>Microsoft Edge 40.15063.0.0, Microsoft EdgeHTML 15.15063</li>
+        </ul>
+    </div>
+    <a href="http://www.example.com">
+        <svg height="82" width="195">
+            <use xlink:href="svg-logo-h.svg#svg-logo"></use>
+        </svg>
+    </a>
+
+    <h1>Anchor wrapped around embedded SVG with no pseudo-class present</h1>
+    <div>
+        <strong>Expected Results:</strong> Should navigate to http://www.example.com. <br />
+        <strong>Actual Results:</strong> Navigates to http://www.example.com as expected. <br />
+        <Strong>Tested In:</Strong>
+        <ul>
+            <li>Microsoft Edge 40.15063.0.0, Microsoft EdgeHTML 15.15063</li>
+        </ul>
+    </div>
+    <a href="http://www.example.com">
+        <svg height="80" width="80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-50 -50 100 100">
+            <rect width="100" height="100" x="-50" y="-50" fill="#f90" rx="4" />
+            <rect width="50" height="50" x="-50" y="-50" fill="#ffb13b" rx="4" />
+            <rect width="50" height="50" fill="#de8500" rx="4" />
+            <use stroke="#f90" stroke-width="22.6" xlink:href="#a" />
+            <circle r="26" />
+            <use stroke="#000" stroke-width="12" xlink:href="#a" />
+            <g id="a">
+                <g id="d">
+                    <g id="c">
+                        <circle id="b" cy="-31.6" r="7.1" fill="#fff" />
+                        <path stroke="#fff" stroke-width="10" d="M0 31.6v-63.2" />
+                        <use y="63.2" xlink:href="#b" />
+                    </g>
+                    <use transform="rotate(90)" xlink:href="#c" />
+                </g>
+                <use transform="rotate(45)" xlink:href="#d" />
+            </g>
+            <path d="M44.7 0v40c0 3.3-1.7 5-5 5h-79.4c-3.3 0-5-1.7-5-5V0" />
+            <path fill="#3f3f3f" d="M36 4.2c3 0 5.3 2.4 5.3 5.3v18c-27.6-3.4-55-8-82-7.7V9.6c0-3 2.4-5.3 5.3-5.3z" />
+            <use stroke="#000" stroke-width="7.4" xlink:href="#e" />
+            <g stroke="#fff" stroke-width="6.4">
+                <g id="e">
+                    <path fill="none" d="M-31.7 31.2a8.3 8.3 0 1 0 8.2-8.3 8.3 8.3 0 1 1 8.3-8.5M23.2 23h8.3v8.3a8.3 8.3 0 0 1-16.5 0V14.7a8.3 8.3 0 0 1 16.5 0" />
+                    <g stroke="#000" stroke-width=".5">
+                        <path fill="#fff" d="M4.8 3h6.8L3.3 42.8h-6.8L-11.8 3h7L0 26.3z" />
+                        <path d="M23.2 19.6v6.8m5-11.7H35m-70.2 16.5h7m9.5-16.5h7" stroke-linecap="square" />
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </a>
+</body>
+</html>
