@@ -29,3 +29,9 @@ Workarounds included for failing test cases (2,3,4,5,6).
  * Test case (7) - Shows issue with workaround, that using <code>pointer-events: none</code> causes hover not to apply - however that is not the reason for this bug.
 * Workaround included for test case (7) however this increases css specificity and is troublesome. Test case (7) is only included so if someone uses any of the workarounds for the failing test cases (2,3,4,5,6) they will know the side effects.
  
+---
+
+### Related Resources
+ * [stackoverflow.com - SVG click events not firing/bubbling when using <use> element](https://stackoverflow.com/questions/24078524/svg-click-events-not-firing-bubbling-when-using-use-element)
+ * [EdgeHTML issue tracker - Click event is not firing on click on svg > use > path](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/10583086/)
+ * [EdgeHTML issue tracker - No direct link to event target when SVG <use> is used](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/7998724/) 
