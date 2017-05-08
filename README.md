@@ -25,6 +25,8 @@ SVG logos which were embedded and linked were optimized via SVGO and then manual
 
 Not all standard pseudo-classes will cause this bug. For example :first-child does not cause this issue. Seems to be limited to [link pseudo-classes](https://www.w3.org/TR/CSS2/selector.html#link-pseudo-classes) and [dynamic pseudo-classes](https://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes).
 
+The behavior maybe conforming to SVG 1.1 specs - which uses the '[SVGElementInstance](https://www.w3.org/TR/SVG11/struct.html#InterfaceSVGElementInstance)' pseudo-nodes rather than the shadow DOM node tree which [SVG 2 redefines](https://github.com/w3c/svgwg/wiki/SVG-2-new-features#use-element-changes) however that doesn't explain why it occurs when certain pseudo-classes are used.
+
 Workarounds included for failing test cases (2,3,4,5,6).
 
 ---
