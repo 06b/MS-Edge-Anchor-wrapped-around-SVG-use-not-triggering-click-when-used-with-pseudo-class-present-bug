@@ -9,10 +9,10 @@
 
  * Test case (1) - Embedded and linked SVG with no pseudo-class present working as expected.
  * Test case (2) - For some reason parts of the SVG within the linked SVG fails however that is not the reason for this bug.
- * Test case (3) - Pseudo-class present and applied to markup. Fails test - Bug
- * Test case (4) - Pseudo-class present and applied to markup. Fails test - Bug
- * Test case (5) - Pseudo-class present and not applied to markup. Fails test - Bug
- * Test case (6) - Pseudo-class present and not applied to markup. Fails test - Bug
+ * Test case (3) - Pseudo-class present and applied to markup. Fails test - Bug - [JSFiddle Example](https://jsfiddle.net/5obazs3e/)
+ * Test case (4) - Pseudo-class present and applied to markup. Fails test - Bug - [JSFiddle Example](https://jsfiddle.net/pqebkwey/)
+ * Test case (5) - Pseudo-class present and not applied to markup. Fails test - Bug - [JSFiddle Example](https://jsfiddle.net/ht6ap5db/)
+ * Test case (6) - Pseudo-class present and not applied to markup. Fails test - Bug - [JSFiddle Example](https://jsfiddle.net/zjgfu2Lr/)
 
 ## Credit
 
