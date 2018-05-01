@@ -1,3 +1,5 @@
+# Fixed in EdgeHTML 16 🎉
+
 # MS Edge Anchor wrapped around SVG <use> not triggering click when used with pseudo-class present
 
  * Test case (1) - Control.
